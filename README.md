@@ -76,8 +76,8 @@ Store events
 -------
 
 ```javascript
-animals.sto().events.on('set', function(item) { });
-animals.sto().events.on('remove', function(item) { });
+animals.sto().events.on('set', function(params) { });
+animals.sto().events.on('remove', function(params) { });
 animals.sto().events.on('clear', function() { });
 ```
 
