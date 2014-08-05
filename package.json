@@ -23,5 +23,8 @@
   "license": "MIT",
   "dependencies": {
     "zoo-utils": "0.0.2"
+  },
+  "devDependencies": {
+    "mocha": "^1.21.3"
   }
 }
