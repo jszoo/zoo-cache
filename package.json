@@ -1,0 +1,27 @@
+{
+  "name": "zoo-cache",
+  "version": "0.0.1",
+  "description": "Universal caching solution",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "homepage": "https://github.com/jszoo/zoo-cache",
+  "bugs": {
+    "url": "https://github.com/jszoo/zoo-cache/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jszoo/zoo-cache.git"
+  },
+  "keywords": [
+    "zoo",
+    "cache",
+    "caching"
+  ],
+  "author": "ruleechen <rulee@live.cn>",
+  "license": "MIT",
+  "dependencies": {
+    "zoo-utils": "0.0.2"
+  }
+}
