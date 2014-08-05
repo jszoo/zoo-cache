@@ -65,7 +65,7 @@ User can specified a absolute expire date to cache item and a expire callback al
 
 ```javascript
 // full api
-set(key, val, expire, notify)
+animals.set(key, val, expire, notify);
 // example
 animals.set('cat', 'cat-mvc', new Date(), function(item) {
     console.log(item + ' has expired');
