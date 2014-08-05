@@ -72,7 +72,7 @@ animals.set('cat', 'cat-mvc', new Date(), function(item) {
 });
 ```
 
-Events
+Store events
 -------
 
 ```javascript
