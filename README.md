@@ -20,11 +20,11 @@ $ npm install zoo-cache
 
 Data store
 -----------
-Store is the inner core data storage. We can implement it to store data in memory or database etc.
+Store is the inner core data storage. We can implement it to store data in memory or database etc. There is already a **MemoryStore** builtin in this solution. Will use MemoryStore when user doesn't specified the store option.
 
 ```javascript
 var cache = require('zoo-cache');
-// change default store (the builtin store is **MemoryStore**)
+// change default store
 cache.defaultStore(new MongoStore());
 ```
 
@@ -42,13 +42,14 @@ var animals = cache.region('animals-cache', new MongoStore());
 
 Universal api
 ---------------
-Friendly and simple api.
+Friendly and simply api.
 
 ```javascript
 var cache = require('zoo-cache');
 // animals set
 var animals = cache.region('animals-cache');
-//
+// api list
+animals.sto(); // get/set inner data store
 animals.set('cat', 'cat-mvc');
 animals.get('cat');
 animals.remove('cat');
