@@ -49,7 +49,7 @@ var cache = require('zoo-cache');
 // animals set
 var animals = cache.region('animals-cache');
 // api list
-animals.sto(); // get/set inner data store
+animals.sto(); // get/set inner store of current region
 animals.set('cat', 'cat-mvc');
 animals.get('cat');
 animals.remove('cat');
