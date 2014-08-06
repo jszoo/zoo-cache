@@ -76,9 +76,9 @@ Store events
 
 ```javascript
 var ev = animals.sto().events;
-ev.on('set', function(params) { /* params.region, params.key, params.value */ });
-ev.on('remove', function(params) { /* params.region, params.key */ });
-ev.on('clear', function(params) { /* params.region */ });
+ev.on('set', function(param) { /* param.region, param.key, param.value */ });
+ev.on('remove', function(param) { /* param.region, param.key */ });
+ev.on('clear', function(param) { /* param.region */ });
 ```
 
 Tests
