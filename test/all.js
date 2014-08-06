@@ -63,7 +63,14 @@ describe('cache', function() {
 });
 
 describe('store', function() {
+
+    var newStore = new cache.MemoryStore();
+    cache.defaultStore(newStore);
     var store = animals.sto();
+
+    it('.defaultStore', function() {
+        assert.equal(store, newStore);
+    });
     
     it('.set', function() {
         assert.equal(store.set('test_region', 'key', 'value'), undefined);
