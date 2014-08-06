@@ -66,8 +66,8 @@ User can specified a absolute expire date to cache item and a expire callback al
 // full api
 animals.set(key, val, expire, notify);
 // example
-animals.set('cat', 'cat-mvc', new Date(), function(item) {
-    console.log(item + ' has expired');
+animals.set('cat', 'cat-mvc', new Date(), function(param) {
+    console.log(param.value + ' is ' + param.action);
 });
 ```
 
@@ -75,9 +75,10 @@ Store events
 -------
 
 ```javascript
-animals.sto().events.on('set', function(params) { });
-animals.sto().events.on('remove', function(params) { });
-animals.sto().events.on('clear', function() { });
+var ev = animals.sto().events;
+ev.on('set', function(params) { /* params.region, params.key, params.value */ });
+ev.on('remove', function(params) { /* params.region, params.key */ });
+ev.on('clear', function(params) { /* params.region */ });
 ```
 
 Tests
