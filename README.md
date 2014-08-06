@@ -7,7 +7,6 @@ Features
 ---------
 + Customizable inner data store
 + Customizable inner data region
-+ Universal operating api
 + Support cache item expire and expire callback
 + Events on operating cache item
 
@@ -40,7 +39,7 @@ var animals = cache.region('animals-cache');
 var animals = cache.region('animals-cache', new MongoStore());
 ```
 
-Universal api
+API
 ---------------
 Friendly and simply api.
 
