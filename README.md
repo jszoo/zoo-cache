@@ -76,10 +76,10 @@ Store events
 All data changes events of the inner data store.
 
 ```javascript
-var ev = animals.sto().events;
-ev.on('set', function(param) { /* param.region, param.key, param.value */ });
-ev.on('remove', function(param) { /* param.region, param.key */ });
-ev.on('clear', function(param) { /* param.region */ });
+var store = animals.sto();
+store.on('set', function(param) { /* param.region, param.key, param.value */ });
+store.on('remove', function(param) { /* param.region, param.key */ });
+store.on('clear', function(param) { /* param.region */ });
 ```
 
 Tests
