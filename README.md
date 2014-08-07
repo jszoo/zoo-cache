@@ -34,9 +34,9 @@ Region is a subset of the data store.
 ```javascript
 var cache = require('zoo-cache');
 // animals set
-var animals = cache.region('animals-cache');
+var animals = cache.region('animals');
 // or specified a store
-var animals = cache.region('animals-cache', new MongoStore());
+var animals = cache.region('animals', new MongoStore());
 ```
 
 API
@@ -46,9 +46,9 @@ Friendly and simply api.
 ```javascript
 var cache = require('zoo-cache');
 // animals set
-var animals = cache.region('animals-cache');
+var animals = cache.region('animals');
 // api list
-animals.sto(); // get/set inner store of current region
+animals.sto(); // get or set inner store of current region
 animals.set('cat', 'cat-mvc');
 animals.get('cat');
 animals.remove('cat');
@@ -60,7 +60,7 @@ animals.clear();
 
 Caching expire
 ---------------
-User can specified a absolute expire date to cache item and a expire callback also available.
+User can specify a absolute expire date to cache item and a expire callback also available.
 
 ```javascript
 // full api
@@ -73,6 +73,7 @@ animals.set('cat', 'cat-mvc', new Date(), function(param) {
 
 Store events
 -------
+All data changes events of the inner data store.
 
 ```javascript
 var ev = animals.sto().events;
