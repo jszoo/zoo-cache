@@ -22,7 +22,7 @@
   "author": "ruleechen <rulee@live.cn>",
   "license": "MIT",
   "dependencies": {
-    "zoo-utils": "0.0.2"
+    "zoo-utils": "0.0.3"
   },
   "devDependencies": {
     "mocha": "^1.21.3"
