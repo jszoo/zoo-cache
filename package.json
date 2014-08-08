@@ -1,6 +1,6 @@
 {
   "name": "zoo-cache",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Universal caching solution",
   "main": "lib/index.js",
   "scripts": {
@@ -23,7 +23,7 @@
   "author": "ruleechen <rulee@live.cn>",
   "license": "MIT",
   "dependencies": {
-    "zoo-utils": "0.0.3"
+    "zoo-utils": "0.0.4"
   },
   "devDependencies": {
     "mocha": "^1.21.3"
