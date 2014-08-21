@@ -1,6 +1,6 @@
 {
   "name": "zoo-cache",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Universal caching solution",
   "main": "lib/index.js",
   "scripts": {

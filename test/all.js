@@ -14,8 +14,8 @@ var animals = cache.region('animals');
 describe('cache', function() {
     
     it('.set 2 items', function() {
-        assert.equal(animals.set('cat1', 'cat1'), undefined);
-        assert.equal(animals.set('cat2', 'cat2'), undefined);
+        assert.equal(animals.set('cat1', 'cat1'), animals);
+        assert.equal(animals.set('cat2', 'cat2'), animals);
     });
 
     it('.get one of the 2 item', function() {
@@ -49,12 +49,16 @@ describe('cache', function() {
         assert.equal(animals.remove('cat1'), true);
     });
 
+    it('.remove not exist', function() {
+        assert.equal(animals.remove('cat1'), false);
+    });
+
     it('.exists again after remove', function() {
         assert.equal(animals.exists('cat1'), false);
     });
 
     it('.clear', function() {
-        assert.equal(animals.clear(), true);
+        assert.equal(animals.clear(), animals);
     });
 
     it('.count again after clear', function() {
@@ -73,8 +77,8 @@ describe('store', function() {
     });
     
     it('.set', function() {
-        assert.equal(store.set('test_region', 'key', 'value'), undefined);
-        assert.equal(store.set('test_region', 'key2', 'value2'), undefined);
+        assert.equal(store.set('test_region', 'key', 'value'), store);
+        assert.equal(store.set('test_region', 'key2', 'value2'), store);
     });
 
     it('.get', function() {
@@ -94,6 +98,6 @@ describe('store', function() {
     });
 
     it('.clear', function() {
-        assert.equal(store.clear('test_region'), true);
+        assert.equal(store.clear('test_region'), store);
     });
 });
